@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = 'ru', 'eng'>
+    <head>
+        <meta charset = 'utf-8'>
+        <title>Главная страница</title>
+        <link href="register.css" rel="stylesheet" type="text/css">
+    </head>
+    <body bgcolor="FFFFFF">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="main_page.html">Главное меню</a></li>
+                    <li><a href="reg_or_log_in.html" class='active_nav'>Сделать заказ</a></li>
+                    <li><a href="additional_page.html">Дополнительное</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="passport.html">Паспорт и задача</a></li>
+                </ul>
+            </nav>
+            <div id="tg">
+                <a href="https://t.me/rinasmetanina" target="_blank"><img src="/photos/telegram-svgrepo-com.svg" alt="Напишите нам в Телеграм" id="tg_icon"></a>
+            </div>
+            <div id="maps">
+                <a href="https://www.google.ru/maps/search/дринкит/@55.6562272,37.6017791,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" >
+                    <img src="/photos/maps_icon.png" alt="Найти Дринкит на карте" id="maps_icon"></a>
+            </div>
+            
+        </header>
+
+<section class = 'form_to_reg'>
+    <h2>Зарегистрируйтесь, чтобы сделать заказ</h2>
+    <form action="https://www.google.com/search?" id="Reg" name ="Reg" target="_blank">
+        <input type="hidden"  name="q" value="search">
+        Фамилия:
+        <br>
+        <input type="text" name="surname" value="Анисимова">
+        <br>
+        <br>
+        Имя:
+        <br>
+        <input type="text" name="name" value="Рина">
+        <br>
+        <br>
+        Группа:
+        <br>
+        <input type="text" name="group" value="БМД232">
+        <br>
+        <br>
+        Телефон:
+        <br>
+        <input type="text" name="phone number" value="+79170939715">
+        <br>
+        <br>
+        Почта:
+        <br>
+        <input type="text" name="email" value="rsanisimova@edu.hse.ru">
+        <br>
+        <br>
+        Придумайте пароль:
+        <br>
+        <input type="password" name="password" value="0987">
+        <br>
+        <br>
+        Для потверждения, <br>что вы человек, <br>введите дату регистрации:
+        <br>
+        <input type="date" name="user_date"  value='06.11.2024'>
+        
+        <br>
+        <br>
+        <a href="thanking_for_order.html"><input type="Submit" id="submit"  value="Заказать"></a>
+        <input type="Reset"  id="reset"  value="Очистить"></a>
+
+
+    </form>
+</section>
+
+
+<footer>
+    <h4>Напишите нам, мы сделаем вам сайт</h1>
+        <p>Будем рады каждому клиенту!</p>
+    <p id="contacts">номер: <a href="tel+7(917)093-97-15">+7(917)093-97-15</a>
+        <br>
+        <br>
+        почта: <a href = ‘mailto:rsanisimova@hse.edu.ru’>rsanisimova@hse.edu.ru</a> 
+        <br>
+
+    </p>
+</footer>
+
+<script>
+    document.getElementById('submit').onclick = function() {
+        setInterval(function()
+    {
+        window.location.href = 'catalogue_cart.html';
+    }, 5*100);
+    }
+</script>

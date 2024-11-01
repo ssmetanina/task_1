@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang = 'ru', 'eng'>
+    <head>
+        <meta charset = 'utf-8'>
+        <title>Главная страница</title>
+        <link href="register.css" rel="stylesheet" type="text/css">
+    </head>
+    <body bgcolor="FFFFFF">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="main_page.html">Главное меню</a></li>
+                    <li><a href="catalogue_cart.html" class='active_nav'>Сделать заказ</a></li>
+                    <li><a href="additional_page.html">Дополнительное</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="passport.html">Паспорт и задача</a></li>
+                </ul>
+            </nav>
+            <div id="tg">
+                <a href="https://t.me/rinasmetanina" target="_blank"><img src="/photos/telegram-svgrepo-com.svg" alt="Напишите нам в Телеграм" id="tg_icon"></a>
+            </div>
+            <div id="maps">
+                <a href="https://www.google.ru/maps/search/дринкит/@55.6562272,37.6017791,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" >
+                    <img src="/photos/maps_icon.png" alt="Найти Дринкит на карте" id="maps_icon"></a>
+            </div>
+            
+        </header>
+
+        <h1>Спасибо за заказ!</h1>
+        <h4>Номер вашего заказа:</h4> <h3 id="random_number"></h3>
+
+<script>
+    function generateRandomNumber(min, max) {
+        return Math.floor (Math.random()*(max - min + 1))+min;
+    }
+
+    document.getElementById('random_number').textContent = generateRandomNumber(1, 1000);
+
+</script>
+
+        <style>
+            /* подключаю шрифт Stolz Regular */
+@font-face {
+    font-family: 'Stolz Regular';
+    src: local('Stolz'),
+         url('/fonts/stolzl_regular.woff2') format('woff2'), 
+         url('/fonts/stolzl_regular.woff') format('woff');
+  }
+/* Stolz Book */
+@font-face {
+	font-family: 'Stolz Book';
+	src: local('Stolz Book'),
+		url('/fonts/stolzl_book.woff2') format('woff2'), 
+		url('/fonts/stolzl_book.woff') format('woff');
+}
+:target:before {
+    content: "";
+    display: block;
+    height: 80px; /* высота заголовка */
+    margin: -80px 0 0; /* компенсация отступа */
+  }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Stolz Regular';
+}
+
+header {
+    background-image: url('/photos/header_bg.png');
+    margin-top: 0px;
+    height: 90px;
+    width: auto;
+    position: relative;
+}
+
+
+nav {
+    background-image: url('/photos/header_bg.png');
+    margin-top: 0px;
+    height: 50px;
+    width: 1440px;
+    text-align: left;
+    font-size: 11.5px;
+    padding: 15px 15px;
+    font-weight:bolder;
+    font-family: 'Stolz Regular';
+    position:fixed;
+}
+
+nav ul {
+    
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    color: #130C03;
+
+}
+nav li {
+    margin-left: 100px;
+    display: inline-block;
+    border: 2px solid #130C03;
+    background-color: #D9D9D9;
+    text-align: center;
+    margin: 0px 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 5px -5px black;
+    width: 175px;
+    height: 50px;
+}
+nav li:hover{
+    background-color: #FFFFFF;
+
+}
+
+nav li a {
+    text-decoration: none;
+    color:#130C03;
+    display:block;
+    padding: 20px 20px;
+}
+
+nav li a:hover{
+    color:blue
+}
+
+.active_nav {
+    background-color: #FFFFFF;
+    color: blue;
+    border-radius: 12px;
+    box-shadow: 0 5px 5px -5px black;
+    width: 135px;
+    height: 10px;
+}
+
+#main_page {
+    padding: 6px 18px;
+    border: 0;
+    border-radius: 5px;
+    background-color: whitesmoke; 
+}
+
+#tg {
+    position: absolute;
+    margin-left: 94%;
+    margin-top: 15px;
+    position: fixed;
+}
+#tg_icon {
+    width: 60px;
+    height: 60px;
+}
+
+#maps {
+    position: absolute;
+    margin-left: 88%;
+    margin-top: 20px;
+    position: fixed;
+}
+#maps_icon {
+    width: 90px;
+}
+            footer {
+    margin-top: 200px;
+    padding: 25px 50px;
+    background-color: #130C03;
+    color:#FFFFFF;
+}
+
+footer #contacts {
+    margin-left: 750px;
+    margin-top: -75px;
+}
+
+h1 {
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+h4 {
+    margin-left: 37.5%;
+    font-size: 22px;
+}
+
+h3 {
+    margin-left: 46%;
+    font-size: 30px;
+}
+
+        </style>

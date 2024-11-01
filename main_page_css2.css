@@ -1,0 +1,110 @@
+/* подключаю шрифт Stolz Regular */
+@font-face {
+    font-family: 'Stolz Regular';
+    src: local('Stolz'),
+         url('/fonts/stolzl_regular.woff2') format('woff2'), 
+         url('/fonts/stolzl_regular.woff') format('woff');
+  }
+/* Stolz Book */
+@font-face {
+	font-family: 'Stolz Book';
+	src: local('Stolz Book'),
+		url('/fonts/stolzl_book.woff2') format('woff2'), 
+		url('/fonts/stolzl_book.woff') format('woff');
+}
+
+header {
+    background-image: url('/photos/header_bg.png');
+    margin-top: 30px;
+    height: 120px;
+    width: auto;
+    position: relative;
+}
+nav {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 20px;
+    margin-left: 100px;
+}
+
+
+.nav {
+    text-align:center;
+    border: 2px solid #130C03;
+    border-radius: 12px;
+    background-color: #D9D9D9; 
+    font-size: 11.5px;
+    padding: 15px 15px;
+    margin: 5px 25px;
+    width:150px;
+    height:60px;
+    font-weight:bolder;
+    box-shadow: 0 5px 5px -5px black;
+    font-family: 'Stolz Regular';
+}
+
+.nav a {
+    text-decoration: none;
+    color:#130C03;
+}
+.nav:hover{
+    background-color: #FFFFFF;
+}
+
+#tg {
+    position: absolute;
+    margin-left: 94%;
+    margin-top: -60px;
+
+}
+#tg_icon {
+    width: 60px;
+    height: 60px;
+}
+
+#sidebar {
+    margin: 75px 75px 0px 0px;
+    width: 180px;
+    height: 350px;
+    background-color: #0125AF;
+    font-family: 'Stolz Regular';
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    text-align: left;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+}
+
+#sidebar li {
+    margin: 20px 8px 10px 0px;
+    font-size: 11px;
+    padding: 0px;
+    border-radius: 12px;
+    border: 1.5px solid #FFFFFF;
+
+}
+
+
+#sidebar li a {
+    display:block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px 12px;
+}
+
+#sidebar li:hover{
+    color: #0125AF;
+    background-color: #FFFFFF;
+
+}
+
+#sidebar li a:hover {
+    color: #0125AF;
+}
+
+

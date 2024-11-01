@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang = 'ru', 'eng'>
+    <head>
+        <meta charset = 'utf-8'>
+        <title>Главная страница</title>
+        <link href="catalogue_cart.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <body bgcolor="FFFFFF">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="main_page.html">Главное меню</a></li>
+                    <li><a href="catalogue_cart.html" class='active_nav'>Сделать заказ</a></li>
+                    <li><a href="additional_page.html">Дополнительное</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="passport.html">Паспорт и задача</a></li>
+                </ul>
+            </nav>
+            <div id="tg">
+                <a href="https://t.me/rinasmetanina" target="_blank"><img src="/photos/telegram-svgrepo-com.svg" alt="Напишите нам в Телеграм" id="tg_icon"></a>
+            </div>
+            <div id="maps">
+                <a href="https://www.google.ru/maps/search/дринкит/@55.6562272,37.6017791,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" >
+                    <img src="/photos/maps_icon.png" alt="Найти Дринкит на карте" id="maps_icon"></a>
+            </div>
+            
+        </header>
+        <section class = 'menu'>
+        <h2>Наше меню</h2>
+        <table align="center" cellspacing = '0' cellpadding = '10' border = '1' background ='/photos/background_for_table.jpg'>
+            <tbody>
+            <tr>
+            <td>&nbsp;</td>
+            <td>Название</td>
+            <td>Цена (в рублях)</td>
+            </tr>
+            <tr>
+            <td>
+                <a href="/photos/espresso.png" onclick="openImage('/photos/espresso.png'); return false;">
+                <img src="/photos/espresso.png" title="Эспрессо" width='100px' >
+            </a>
+            </td>
+            <td>Эспрессо</td>
+            <td>150</td>
+            </tr>
+            <tr>
+            <td>
+                <a href="/photos/americano.png" onclick="openImage('/photos/americano.png'); return false;">
+                <img src="/photos/americano.png" title="Американо" width="100px"></td>
+            </a>
+            <td>Американо</td>
+            <td>180</td>
+            </tr>
+            <tr>
+            <td>
+                <a href="/photos/capuchino.png" onclick="openImage('/photos/capuchino.png'); return false;">
+                <img src="/photos/capuchino.png" title="Капучино" width="100px"></td>
+            </a>
+            <td>Капучино</td>
+            <td>220</td>
+            </tr>
+            <tr>
+            <td>
+                <a href="/photos/latte.png" onclick="openImage('/photos/latte.png'); return false;">
+                <img src="/photos/latte.png" title="Латте" width="100px"></td>
+            </a>
+            <td><a href="https://www.russianfood.com/recipes/bytype/?fid=1738">Латте</a></td>
+            <td>250</td>
+            </tr>
+            <tr>
+            <td>
+                <a href="/photos/raf.png" onclick="openImage('/photos/raf.png'); return false;">
+                <img src="/photos/raf.png" title="Раф" width="100px">
+            </a>
+            <td>Раф</td>
+            <td>300</td>
+            </tr>
+            </tbody>
+            </table>
+        </section>
+
+        <section class = 'to_order'>
+            <h2>Сделайте заказ</h2>
+            <h4>Обратите внимание, что ваш заказ будет готов через 10 минут. 
+                <br>
+                Если вы не придете за ним через 15 минут после готовности, <br> нам придется утилизировать его.
+            </h4>
+            <form action="https://www.google.com/search?" id="order" name ="order" target="_blank">
+                <input type="hidden"  name="q" value="search">
+                <p>
+                    Имя: 
+                    <br>
+                    <input type="text" name = 'first_name' size = 10 value="Рина">
+                </p>
+                <p id = 'choice_of_corpus'>
+                    В кофейне на:
+                    <br>
+                    <input type="radio" name="corpus" value="olymp_pr.14">Олимпийский пр., 14
+                    <br>
+                    <input type="radio" name="corpus" value="pokrovka.16" checked>ул. Покровка, 16
+                    <br>
+                    <input type="radio" name="corpus" value="2brests">ул. 2-я Брестсткая, 37с1
+                    <br>
+                    <input type="radio" name="corpus" value="ukrainblvr">Украинский б-р, 6
+                    <br>
+                    <input type="radio" name="corpus" value="leninsloboda">ул. Ленинская слобода, 19
+                </p>
+                <p id="choice_from_menu">
+                    Ваш выбор из меню:
+                    <br>
+                    <input type="checkbox" name="choice" value="150">Эспрессо
+                    <input type="number" name="amount" value="0" id="amount">
+                    <br>
+                    <input type="checkbox" name="choice" value="180">Американо
+                    <input type="number" name="amount" value="0" id="amount">
+                    <br>
+                    <input type="checkbox" name="choice" value="220">Капучино
+                    <input type="number" name="amount" value="0" id="amount">
+                    <br>
+                    <input type="checkbox" name="choice" value="250" checked>Латте
+                    <input type="number" name="amount" value="2" id="amount">
+                    <br>
+                    <input type="checkbox" name="choice" value="300" checked>Раф
+                    <input type="number" name="amount" value="1" id="amount">
+                </p>
+                <p id="date_if_needed">
+                    Если планируете заказывать на определенную дату, укажите ее здесь. <br>
+                    Если нет, оставьте значение пустым. <br>
+                    <input type="date" name="date_for_order">
+                <p id = "password">
+                    Для подтверждения личности введите пароль: 
+                    <br>
+                    <input type="password" name="password" size="10" value="0987" id="password_type">
+                </p>
+
+                </p>
+                <a href="thanking_for_order.html"><input type="Submit" id="Order"  value="Заказать"></a>
+                <input type="Reset"  id="reset"  value="Очистить">
+            </form>
+
+        </section>
+        
+
+        <footer>
+            <h4>Напишите нам, мы сделаем вам сайт</h1>
+                <p>Будем рады каждому клиенту!</p>
+            <p id="contacts">номер: <a href="tel+7(917)093-97-15">+7(917)093-97-15</a>
+                <br>
+                <br>
+                почта: <a href = ‘mailto:rsanisimova@hse.edu.ru’>rsanisimova@hse.edu.ru</a> 
+                <br>
+    
+            </p>
+        </footer>
+
+        <script src='catalogue_js.js'></script>
+
+        </body>
+    
